@@ -1,0 +1,62 @@
+// Animation mixin: from, X, Y.
+
+@mixin ani-move-from-hidden($dir, $x, $y) {
+
+	@if $dir == from {
+
+		transition: all .3s;
+		opacity: 0;
+		transform: translate(#{$x}px, #{$y}px);
+
+		&:hover {
+			transition: all .3s;
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+
+	} @else if $dir == to {
+
+		transition: all .3s;
+		opacity: 0;
+		transform: translate(0, 0);
+
+		&:hover {
+			transition: all .3s;
+			opacity: 1;
+			transform: translate(#{$x}px, #{$y}px);
+		}
+	}
+}
+
+/* @include ani-move-from-hidden(from, 0, 100); */
+
+// Animation width 0% -> 100%
+
+@mixin ani-slide($slide-dir, $slide-dur) {
+
+	@if $slide-dir == close {
+
+		transition: all #{$slide-dur}s;
+		width: 100%;
+		color: green;
+		
+		&:hover {
+			color: red;
+			transition: all #{$slide-dur}s;
+			width: 0%;
+			overflow: hidden;
+		}
+
+	} @else if $slide-dir == open {
+
+		transition: all #{$slide-dur}s;
+		width: 0%;
+		overflow: hidden;
+		
+		&:hover {
+			transition: all #{$slide-dur}s;
+			width: 100%;
+		}
+	}
+}
+/* @include ani-slide(close, 0.3); */

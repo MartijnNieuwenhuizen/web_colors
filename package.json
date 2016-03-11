@@ -1,0 +1,36 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "this is my gulp workflow",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "gulp",
+    "workflow"
+  ],
+  "author": "Martijn Nieuwenhuizen",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.5.1",
+    "run-sequence": "^1.1.5"
+  },
+  "dependencies": {
+    "gulp-ejs-precompiler": "^0.2.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-insert": "^0.5.0",
+    "gulp-load-plugins": "^1.2.0"
+  }
+}

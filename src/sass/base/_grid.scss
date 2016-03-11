@@ -1,0 +1,51 @@
+$golden: 1.61803398875;
+$max-container-width: 70em;
+
+$hero-block: 100vw;
+$xxlarge-block: $max-container-width;		/* 70rem */
+$xlarge-block: $xxlarge-block / $golden;	/* 43,2rem */
+$large-block: $xlarge-block / $golden;		/* 26,7rem */
+$medium-block: $large-block / $golden;		/* 16,5rem */
+$small-block: $medium-block / $golden;		/* 10,2rem */
+$tiny-block: $small-block / $golden;		/* 6,3rem */
+
+
+
+@mixin hero-block {
+	max-width: $hero-block;
+}
+@mixin xxlarge-block {
+	max-width: $xxlarge-block;
+}
+@mixin xlarge-block {
+	max-width: $xlarge-block;
+}
+@mixin large-block {
+	max-width: $large-block;
+}
+@mixin medium-block {
+	max-width: $medium-block;
+}
+@mixin small-block {
+	max-width: $small-block;
+}
+@mixin tiny-block {
+	max-width: $tiny-block;
+}
+
+/* width: $max-container-width; */
+/* @include large-block; */
+
+
+/* Gutters */
+$gutter: 1.312rem;
+$small-gutter: $gutter / $golden;
+$tiny-gutter: $small-gutter / $golden;
+$large-gutter: $gutter * $golden;
+$xlarge-gutter: $large-gutter * $golden;
+$xxlarge-gutter: $xlarge-gutter * $golden;
+
+
+
+
+

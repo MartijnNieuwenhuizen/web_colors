@@ -1,0 +1,102 @@
+$golden: 1.61803398875;
+
+$base-font-size: 1.313rem;
+$base-line-height: 2.063rem;
+
+$small-font-size: $base-font-size / $golden;
+$small-line-height: $base-line-height / $golden;
+
+$tiny-font-size: $small-font-size / $golden;
+$tiny-line-height: $small-line-height / $golden;
+
+$med-font-size: $base-font-size;
+$med-line-height: $base-line-height;
+
+$large-font-size: $med-font-size * $golden;
+$large-line-height: $med-line-height * $golden;
+
+$xlarge-font-size: $large-font-size * $golden;
+$xlarge-line-height: $large-line-height * $golden;
+
+$xxlarge-font-size: $xlarge-font-size * $golden;
+$xxlarge-line-height: $xlarge-line-height * $golden;
+
+@mixin tiny {
+	font-size: $tiny-font-size;
+	line-height: $tiny-line-height;
+}
+@mixin small {
+	font-size: $small-font-size;
+	line-height: $small-line-height;
+}
+@mixin medium {
+	font-size: $med-font-size;
+	line-height: $med-line-height;
+}
+@mixin large {
+	font-size: $large-font-size;
+	line-height: $large-line-height;
+}
+@mixin xlarge {
+	font-size: $xlarge-font-size;
+	line-height: $xlarge-line-height;
+}
+@mixin xxlarge {
+	font-size: $xxlarge-font-size;
+	line-height: $xxlarge-line-height;
+}
+
+h1 {
+	@include xlarge;
+}
+h2 {
+	@include large;
+	font-weight: 300;
+}
+h3 {
+	@include large;
+	font-weight: bold;
+}
+h4, p, a, span, i, a, b, blockquote, li {
+	@include medium;
+	color: $font-black;
+}
+
+// Set margin default at 0
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+span {
+
+}
+i {
+
+}
+b {
+
+}
+blockquote {
+
+}
+
+
+
+// Project Font Style
+$primary-font: "Menlo", "Open Sans", "Helvetica", Sans-Serif;
+$secondary-font: "Georgia", "Times", "Times New Roman", Serif;
+$accent-font: "Garamond", Serif;
+
+* {
+	font-family: $primary-font;
+	color: $font-black;
+}
+
+
+
+
+
+

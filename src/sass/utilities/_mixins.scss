@@ -1,0 +1,30 @@
+// Flexbox Mixins
+@mixin flex($direction, $justify) {
+	display: flex;
+	flex-direction: $direction;
+
+  	@if $direction == row {
+
+    	justify-content: $justify;
+
+    } @else if $direction == row-reverse {
+
+      	justify-content: $justify;
+
+    } @else if $direction == column {
+
+      	align-items: $justify;
+
+    } @else if $direction == column-reverse {
+      	
+      	align-items: $justify;
+
+    } @else {
+      	
+      	justify-content: $justify;
+      	align-items: $justify;
+
+    }
+}
+
+/* @include flex(column, center); */
